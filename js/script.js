@@ -8,7 +8,6 @@ function computerPlay() {
 
 const computerSelection = computerPlay();
 let playerSelection;
-let question;
 let playerScore = 0;
 let computerScore = 0;
 
