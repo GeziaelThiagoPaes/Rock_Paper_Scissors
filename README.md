@@ -9,4 +9,6 @@
 
 :books: I’m currently learning everything.
 
-ℹ️: Results appear in browser inspector > console
+⚠️: Results appear in browser inspector > console
+
+🔗 https://geziaelthiagopaes.github.io/rock_paper_scissors/ 👈
