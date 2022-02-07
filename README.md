@@ -1,1 +1,1 @@
-# building the rock paper scissors game with java-script
+# __building the rock paper scissors game with java-script
