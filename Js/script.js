@@ -7,28 +7,30 @@ function computerPlay() {
 }
 
 const computerSelection = computerPlay();
-const playerSelection = "ROCK";
+let playerSelection;
+let question;
 let playerScore = 0;
 let computerScore = 0;
 
 function game() {
     for (let i = 0; i < 5; i++) {
+        playerSelection = prompt("Rock, Paper or Scissors?".toUpperCase())
         const computerRamdon = computerPlay();
-        console.log(playRound(playerSelection, computerRamdon))
+        console.log(playRound(playerSelection.toUpperCase(), computerRamdon))
 
     }
     function winScore() {
         if (playerScore > computerScore) {
-            console.log(`Player won : ${playerScore} ponto`)
+            console.log(`Player won  `)
 
         }
         else if (computerScore > playerScore) {
-            console.log(`computer won : ${computerScore} `)
+            console.log(`computer won `)
 
 
         }
         else {
-            console.log(`Tie score between : ${playerScore} and computer : ${computerScore} `)
+            console.log(`Tie`)
 
         }
     }
