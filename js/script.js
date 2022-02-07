@@ -1,9 +1,9 @@
 
-let gamearray = ["ROCK", "PAPER", "SCISSORS"];
+let arrayGameComputer = ["ROCK", "PAPER", "SCISSORS"];
 function computerPlay() {
-    var t = Math.floor(Math.random() * gamearray.length)
-    let rvalue = gamearray[t];
-    return rvalue;
+    var ramdomValueArray = Math.floor(Math.random() * arrayGameComputer.length)
+    let ramdomValue = arrayGameComputer[ramdomValueArray];
+    return ramdomValue;
 }
 
 const computerSelection = computerPlay();
@@ -46,23 +46,23 @@ function playRound(playerSelection, computerSelection) {
         computerScore = computerScore;
         return (`Tie : ${playerSelection} X ${computerSelection}`);
     }
-    else if ((playerSelection === "ROCK" && computerSelection == gamearray[1]) ||
-        (playerSelection == "SCISSORS" && computerSelection == gamearray[0]) ||
-        (playerSelection == "PAPER" && computerSelection == gamearray[2])) {
-        computerScore++;
-        playerScore = playerScore - 1;
-        return (`You Lose! : ${playerSelection} X ${computerSelection}`);
-
-    }
-    else {
-        playerScore++;
-        computerScore = computerScore - 1;
-        return `The player won : ${playerSelection} X ${computerSelection}`;
-
-    }
+    else if ((playerSelection === "ROCK" && computerSelection == arrayGameComputer[1]) ||
+        (playerSelection == "SCISSORS" && computerSelection == arrayGameComputer[0]) ||
+        (playerSelection == "PAPER" && computerSelection == arrayGameComputer[2])) {
+            computerScore++;
+            playerScore = playerScore - 1;
+            return (`You Lose! : ${playerSelection} X ${computerSelection}`);
 
 
-}
+            {
+                playerScore++;
+                computerScore = computerScore - 1;
+                return `The player won : ${playerSelection} X ${computerSelection}`;
+
+            }
+
+
+        }
 
 game();
 
