@@ -1,1 +1,1 @@
-# rock_paper_scissors
+# building the rock paper scissors game with java-script
