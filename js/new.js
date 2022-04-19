@@ -1,62 +1,79 @@
 const botaoRock = document.querySelector('#btn_rock');
 const botaoPaper = document.querySelector('#btn_paper');
 const botaoScissor = document.querySelector('#btn_scissors');
-let placar = document.querySelector('#placar');
-let vencedor = document.querySelector('#vencedor');
+const placar = document.querySelector('#placar');
+const vencedor = document.querySelector('#vencedor');
 
-let valor;
-let maquina= ["rock","paper","scissors"];
+var valor;
+var v;
+var round = 0;
+
+
+var maquina = ["rock", "paper", "scissors"];
 function machineGame() {
-    let ramdom = Math.floor(Math.random()* maquina.length);
+    let ramdom = Math.floor(Math.random() * maquina.length);
     let arrayValue = maquina[ramdom];
     return arrayValue;
 };
 
-let v = machineGame();
+
 function game() {
-   for (let i = 0; i < 5; i++) {
-       const valorRamdom= machineGame();
-     vencedor.textContent = `${valor} x ${valorRamdom}`; 
-   };
-  
-function playRound() {
-    let playerScore=0;
-    let computerScore=0
+    const valorRamdom = machineGame();
+    v = valorRamdom;
+    playRound();
+    for (let i = 0; i < 5; i++) {
+        if (i ==0){
+            playRound()
+        } else if (i >=5){
+            return 'over';
+        } 
+        
+    }
+   
+
+
+};
+function playRound(playerScore, computerScore) {
+    //console.log(valor);
+    //console.log(v);
+    playerScore=0;
+    computerScore=0;
     if (valor == v) {
         playerScore = playerScore;
         computerScore = computerScore;
-        placar.textContent =(`Tie : ${playerScore} X ${computerScore}`);
+        placar.textContent = (`Tie : ${playerScore} X ${computerScore}`);
     }
-    else if ((valor === "rock" && v == maquina[1]) ||
+    else if ((valor == "rock" && v == maquina[1]) ||
         (valor == "scissors" && v == maquina[0]) ||
         (valor == "paper" && v == maquina[2])) {
         computerScore++;
         playerScore = playerScore;
         console.log(valor, 'x', v);
-       placar.textContent = (`You Lose! : ${playerScore} X ${computerScore}`);
-   }
+        placar.textContent = (`You Lose! : ${playerScore} X ${computerScore}`);
+    }
     else {
         playerScore++;
         computerScore = computerScore;
-        placar.textContent =( `The player won : ${playerScore} X ${computerScore}`);
+        placar.textContent = (`The player won : ${playerScore} X ${computerScore}`);
 
     }
-}
-playRound();
+    
 }
 
-botaoRock.addEventListener('click', ()=>{
+
+
+botaoRock.addEventListener('click', () => {
     valor = 'rock';
     game();
 })
 
 
-botaoPaper.addEventListener('click', ()=>{
+botaoPaper.addEventListener('click', () => {
     valor = 'paper';
     game();
 })
 
-botaoScissor.addEventListener('click', ()=>{
-    valor= 'scissors';
+botaoScissor.addEventListener('click', () => {
+    valor = 'scissors';
     game();
 });
