@@ -23,30 +23,23 @@ all_Game_Buttons.forEach(all_Game_Buttons => all_Game_Buttons.addEventListener('
 
     if (playerScore < 5 && computerScore < 5) {
         round_value = playRound(userchoice, machine_Choice);
-
-        scoreboard.textContent = " User : " + playerScore + "  Vs " + " Machine : " + computerScore;
-
+        scoreboard.textContent = " User : " + playerScore + "  X " + " Machine : " + computerScore;
        
 
 
 
     } if (playerScore == 5) {
         winner.textContent = 'Congratulations, you win!';
-
-        scoreboard.textContent = " User : " + playerScore + "  Vs " + " Machine : " + computerScore;
-=======
-        scoreboard.textContent = " User : " + playerScore + " X " + " Machine : " + computerScore;
-
+        scoreboard.textContent = " User : " + playerScore + "  X " + " Machine : " + computerScore;
+        alert('Congratulations, you win!', location.reload());
 
 
 
     } else if (computerScore == 5) {
         winner.textContent = 'Machine Win!';    
-
-        scoreboard.textContent = " User : " + playerScore + "  Vs " + " Machine : " + computerScore;
-
-        scoreboard.textContent = " User : " + playerScore + " X " + " Machine : " + computerScore;
-
+        scoreboard.textContent = " User : " + playerScore + "  X " + " Machine : " + computerScore;
+        alert('I\`m so sorry, you lose!', location.reload());
+    }
 
     machine.textContent = round_value;
 
@@ -63,7 +56,7 @@ function playRound(userchoice, computerSelection) {
         playerScore = playerScore;
         computerScore = computerScore;
         count++;
-        return (`Tie!`);
+        return (`Tie! `);
 
     }
     else if ((userchoice == "rock" && computerSelection == gamearray[1]) ||
@@ -81,7 +74,7 @@ function playRound(userchoice, computerSelection) {
         playerScore++;
         computerScore = computerScore;
         count++;
-        return `You Won!`;
+        return `You Won! `;
 
     };
 
