@@ -22,7 +22,6 @@ header {
 
 section {
     display: flex;
-    flex-direction: column;
     text-align: center;
     justify-content:center;
     width:100%;
@@ -34,18 +33,18 @@ section {
     margin: 15px;
 }
 #game p {
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
 }
 #game h2{
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
 
 }
 #botoes {
     display: flex;
     height: 300px;
-    gap: 15px;
+    gap: 13px;
 }
 
 #container_placar {
