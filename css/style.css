@@ -1,0 +1,105 @@
+* {
+    background-color: rgb(255, 255, 255);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+    margin: 2px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+#round {
+    padding: 15px;
+    flex: 1;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+section {
+    background-color: rgb(131, 146, 233);
+    display: flex;
+    text-align: center;
+    margin: 10px;
+    justify-content:center;
+    width: auto;
+}
+
+#game {
+    
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    padding: 15px;
+    margin: 5px;
+}
+
+#botoes {
+    display: flex;
+    
+}
+
+#container_placar {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    background-color: rgb(15, 19, 19);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#container_placar div {
+    flex: 2 1 350px;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.button:focus {
+    border: solid rgb(38, 61, 133);
+    outline: none;
+}
+
+
+
+#rock {
+    background-image: url('../imagens/rock.png');
+}
+
+#paper {
+
+    background-image: url('../imagens/clipart4288822.png');
+}
+
+#scissors {
+    background-image: url('../imagens/scissors-icon-25538.png');
+}
+
+#scissors,
+#paper,
+#rock {
+    padding: 5px;
+    margin: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    border-radius: 10px 10px 10px 10px;
+    width: 120px;
+    height: 120px;
+
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
