@@ -1,18 +1,16 @@
 body{
-    color: rgb(103, 77, 77);
-    min-height: 100%;
+    color: rgb(73, 58, 58);
     background-color: rgb(255, 255, 255);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 header {
     margin: 2px;
-    width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     text-align: center;
+    padding-bottom: 20px;
 }
 
 #round {
@@ -21,30 +19,32 @@ header {
 }
 
 section {
+    background-color: rgb(249, 249, 249);
     display: flex;
     text-align: center;
     justify-content:center;
-    width:100%;
+    height: 450px;
+
 }
 
 #game {
     text-align: center;
-    padding: 15px;
-    margin: 15px;
+    
 }
 #game p {
-    font-size: 20px;
+    color: white;
+    font-size: 25px;
     font-weight: bold;
 }
 #game h2{
-    font-size: 20px;
+    color: white;
+    font-size: 25px;
     font-weight: bold;
 
 }
 #botoes {
     display: flex;
-    height: 300px;
-    gap: 13px;
+    gap: 5px;
 }
 
 #container_placar {
@@ -52,9 +52,9 @@ section {
     flex-wrap: wrap;
     border:  1px solid blue;
     border-radius: 15px 15px 15px 15px;
-    padding: 1px;
-    background-color: rgb(226, 140, 140);
-    max-width: 1000px;
+    background-color: rgb(242, 134, 134);
+    max-width: 100%;
+    min-height: 50%;
     margin: 0 auto;
 }
 
@@ -62,9 +62,14 @@ section {
     flex: 1 1 300px;
     justify-content: center;
     align-items: center;
-   
+   gap:  10px;
 }
-
+#game{
+    
+    border-radius: 15px 15px 15px 15px ;
+    background-color: rgb(226, 84, 84);
+    padding: 5px;
+}
 .button:focus {
     border: solid rgb(38, 61, 133);
     outline: none;
@@ -92,22 +97,14 @@ section {
     background-repeat: no-repeat;
     object-fit: cover;
     border-radius: 10px 10px 10px 10px;
-    width: 120px;
-    height: 120px;
+   width: 10vmax;
+   height: 10vmax;
+   
 
-}
-
-img {
-    width: 100%;
-    height: 100%;
 }
 
 footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: rgb(103, 77, 77);
-    color: white;
-    text-align: center;
+    display: flex;
+    justify-content:center;
+    align-items:flex-end;
 }
